@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "express": "4.14.0",
-    "dovenv": "2.0.0"
+    "dotenv": "2.0.0"
   },
   "repository": {
     "type": "git",
