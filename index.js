@@ -1,14 +1,14 @@
 // Get env var
 require('dotenv').config();
 
+// Get and configure express connector
 var express = require('express');
 var app = express();
+app.use(express.static('public'));
+
+// Get and configure Postgres connector
 var pg = require('pg');
 pg.defaults.ssl = true
-
-app.get('/', function (req, res) {
-  res.send('Hello Worldy!');
-});
 
 app.get('/db', function (request, response) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
