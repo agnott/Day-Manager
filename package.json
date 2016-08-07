@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "pg": "4.x",
-    "express": "4.x",
-    "dotenv": "2.x"
+    "express": "4.14.0",
+    "dotenv": "2.0.0"
   },
   "repository": {
     "type": "git",
