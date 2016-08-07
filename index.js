@@ -12,7 +12,6 @@ pg.defaults.ssl = true
 
 app.get('/db', function (request, response) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    console.log(client);
     client.query('SELECT * FROM test', function(err, result) {
       done();
       if (err)
