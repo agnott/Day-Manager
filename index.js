@@ -9,5 +9,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(process.env.PORT || 5000, function () {
-  console.log('Example app listening on port 5000!');
+  console.log(`Example app listening on port ${process.env.PORT || 5000}!`);
 });
