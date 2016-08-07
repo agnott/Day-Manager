@@ -1,3 +1,6 @@
+// Get env var
+require('dovenv').config();
+
 var express = require('express');
 var app = express();
 
