@@ -1,0 +1,21 @@
+{
+  "name": "heroku-day-manager",
+  "version": "0.0.1",
+  "description": "A day manager for people.",
+  "engines": {
+    "node": "6.3.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agnott/Day-Manager"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
