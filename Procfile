@@ -1,1 +1,1 @@
-web: node index.js
+web: bin/start.sh

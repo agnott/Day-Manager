@@ -12,7 +12,8 @@
   "dependencies": {
     "pg": "4.x",
     "express": "4.14.0",
-    "dotenv": "2.0.0"
+    "dotenv": "2.0.0",
+    "buildify": "0.4.0"
   },
   "repository": {
     "type": "git",
