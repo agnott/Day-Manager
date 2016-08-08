@@ -4,3 +4,6 @@ npm-debug.log
 
 # Environment vars
 *.env
+
+# Built js
+public/main.js
