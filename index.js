@@ -10,17 +10,23 @@ app.use(express.static('public'));
 var pg = require('pg');
 pg.defaults.ssl = true
 
-app.get('/db', function (request, response) {
+
+/**
+  List all files
+**/
+app.get('/api/files', function (req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM test', function(err, result) {
+    client.query('SELECT id, created, name FROM files WHERE deleted=false', function(err, result) {
       done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-       { response.send({results: result.rows}); }
+      if (err){
+        console.error(err);
+        res.send("Error " + err);
+      }else{
+        res.send(result.rows);
+      }
     });
   });
-})
+});
 
 app.listen(process.env.PORT || 5000, function () {
   console.log(`Example app listening on port ${process.env.PORT || 5000}!`);
