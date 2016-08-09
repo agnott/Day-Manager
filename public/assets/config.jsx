@@ -1,1 +1,5 @@
-var Reqest = axios;
+var STATE = {
+  username: '',
+  keycode: null,
+  fullSignIn: false,
+};
