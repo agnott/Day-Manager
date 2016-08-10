@@ -8,6 +8,7 @@ npm-debug.log
 # Built files
 public/main.js
 public/main.css
+public/main.less
 
 # Git access
-.git-access
+.gitaccess
