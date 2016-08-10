@@ -1,6 +1,22 @@
 // Get env vars
 require('dotenv').config();
 
+//Set up css
+var less = require('less');
+var fs = require('fs');
+var file = fs.readFileSync('public/main.less', "utf8");
+less.render(file, {}, function(err, output){
+  if(err){
+    console.error(err);
+  }else{
+    fs.writeFile("public/main.css", output.css, function(err) {
+      if(err) {
+        console.log(err);
+      }
+    });
+  }
+});
+
 // Get and configure express connector
 var express = require('express');
 var app = express();
