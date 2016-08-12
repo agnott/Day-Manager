@@ -1,5 +1,7 @@
 var STATE = {
-  username: '',
-  keycode: null,
-  fullSignIn: false,
+  user: {
+    username: '',
+    keycode: null,
+    fullSignIn: false,
+  }
 };

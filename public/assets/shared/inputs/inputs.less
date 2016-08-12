@@ -1,0 +1,53 @@
+.styled-input(@bg, @color, @hover-color){
+  font-family: @font-main;
+  font-size: 18px;
+  border: none;
+  border-bottom: 4px solid @color;
+  padding: 10px 10px 5px 10px;
+  box-sizing: border-box;
+  background-color: @bg;
+
+  transition: all .25s ease-in-out;
+
+  &:focus, &.toggled{
+    outline: none;
+    border-bottom: 4px solid @hover-color;
+  }
+}
+
+input[type="text"]{
+  .styled-input(@white, @blue, @gold);
+}
+
+input[type="password"]{
+  .styled-input(@white, @blue, @gold);
+}
+
+.input-toggle{
+  .styled-input(@white, @blue, @gold);
+  cursor: pointer;
+  color: lightgray;
+  display: inline-block;
+
+  .status{
+    float: right;
+  }
+  .status.on{
+    color: gray;
+  }
+
+  &:hover{
+    border-bottom: 4px solid @gold;
+  }
+}
+
+ .input-button{
+   .styled-input(@white, @blue, @gold);
+   cursor: pointer;
+   text-align: center;
+   display: inline-block;
+
+   &:hover{
+     border-bottom: 4px solid @gold;
+   }
+ }
